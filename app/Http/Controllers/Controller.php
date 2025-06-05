@@ -20,7 +20,7 @@ namespace App\Http\Controllers;
  *      bearerFormat="JWT",
  *  )
  * @OA\Server(
- *      url="http://127.0.0.1:8000/api",
+ *      url="http://api.honarisho.com/api",
  *      description="localhost"
  * )
  *

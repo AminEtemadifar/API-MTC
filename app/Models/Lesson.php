@@ -11,6 +11,6 @@ class Lesson extends Model
 
     public function Lesson_type()
     {
-        $this->belongsTo(LessonType::class, 'CodeTL');
+        return $this->belongsTo(LessonType::class, 'CodeTL');
     }
 }

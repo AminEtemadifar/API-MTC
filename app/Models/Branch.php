@@ -10,6 +10,6 @@ class Branch extends Model
     protected $primaryKey = 'CodeBrc';
     public function rank()
     {
-        $this->belongsTo(Rank::class, 'CodeRnk');
+        return $this->belongsTo(Rank::class, 'CodeRnk');
     }
 }

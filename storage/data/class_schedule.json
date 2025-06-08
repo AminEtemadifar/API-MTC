@@ -1,0 +1,292 @@
+[
+    {
+      "id": "705021",
+      "course_offering_code": "705441",
+      "title": "مباحث ويژه",
+      "offering_day": "شنبه",
+      "offering_time": "07:00تا11:00",
+      "classroom_number": "كلاس 1308 طبقه سوم ساختمان آموزشي- كارگاه كامپيوتر",
+      "instructor_name": "علي اصغر فلاح",
+      "exam_date": "2025-01-19"
+    },
+    {
+      "id": "907033",
+      "course_offering_code": "907621",
+      "title": "طراحي صفحات وب پيشرفته",
+      "offering_day": "شنبه",
+      "offering_time": "08:00تا12:00",
+      "classroom_number": "كلاس 1301 طبقه سوم ساختمان آموزشي- كارگاه كامپيوتر",
+      "instructor_name": "مجتبي ملك فر",
+      "exam_date": "2025-01-25"
+    },
+    {
+      "id": "401014",
+      "course_offering_code": "401341",
+      "title": "پيكربندي سرورهاي شبكه",
+      "offering_day": "یک‌شنبه",
+      "offering_time": "15:00تا19:00",
+      "classroom_number": "كلاس 1303 طبقه سوم ساختمان آموزشي- كارگاه كامپيوتر",
+      "instructor_name": "علي سازگارنيا",
+      "exam_date": "2025-01-19"
+    },
+    {
+      "id": "3021129",
+      "course_offering_code": "302431",
+      "title": "هوش مصنوعي",
+      "offering_day": "یک‌شنبه",
+      "offering_time": "15:00تا19:00",
+      "classroom_number": "كلاس 1311 طبقه سوم ساختمان آموزشي",
+      "instructor_name": "مهدي هجراني آرام",
+      "exam_date": "2025-01-13"
+    },
+    {
+      "id": "9991039",
+      "course_offering_code": "303471",
+      "title": "اصول و فنون مذاكره",
+      "offering_day": "یک‌شنبه",
+      "offering_time": "16:00تا18:00",
+      "classroom_number": "كلاس1114طبقه اول ساختمان آموزشي - ديتادار",
+      "instructor_name": "وحيد برجسته نژاد",
+      "exam_date": "2025-01-12"
+    },
+    {
+      "id": "9103",
+      "course_offering_code": "99925",
+      "title": "انديشه اسلامي(2) (نبوت و امامت)",
+      "offering_day": "یک‌شنبه",
+      "offering_time": "16:00تا18:00",
+      "classroom_number": "كلاس1008 طبقه همكف ساختمان آموزشي",
+      "instructor_name": "غلامرضا اكبري مقدم",
+      "exam_date": "2025-01-25"
+    },
+    {
+      "id": "9114",
+      "course_offering_code": "99956",
+      "title": "تاريخ تحليلي صدر اسلام",
+      "offering_day": "یک‌شنبه",
+      "offering_time": "16:00تا18:00",
+      "classroom_number": "كلاس1009 طبقه همكف ساختمان آموزشي",
+      "instructor_name": "سيدمحسن هاشمي",
+      "exam_date": "2025-01-19"
+    },
+    {
+      "id": "9114",
+      "course_offering_code": "99953",
+      "title": "تاريخ تحليلي صدر اسلام",
+      "offering_day": "یک‌شنبه",
+      "offering_time": "16:00تا18:00",
+      "classroom_number": "1011 - ديتادار",
+      "instructor_name": "غلامحسين بشكني",
+      "exam_date": "2025-01-19"
+    },
+    {
+      "id": "907017",
+      "course_offering_code": "907431",
+      "title": "مهندسي نرم‌افزار",
+      "offering_day": "یک‌شنبه",
+      "offering_time": "16:00تا18:00",
+      "classroom_number": "كلاس 1304 طبقه سوم ساختمان آموزشي",
+      "instructor_name": "رضا علي اكبرخاني",
+      "exam_date": "2025-01-16"
+    },
+    {
+      "id": "907002",
+      "course_offering_code": "703112",
+      "title": "رياضي كاربردي",
+      "offering_day": "دوشنبه",
+      "offering_time": "07:00تا10:00",
+      "classroom_number": "كلاس1007 طبقه همكف ساختمان آموزشي",
+      "instructor_name": "حميد رضا يوسف زاده قوچاني",
+      "exam_date": "2025-01-13"
+    },
+    {
+      "id": "9997507",
+      "course_offering_code": "703211",
+      "title": "معادلات ديفرانسيل",
+      "offering_day": "دوشنبه",
+      "offering_time": "07:00تا10:00",
+      "classroom_number": "-",
+      "instructor_name": "مهدي بقراطي",
+      "exam_date": "2025-01-20"
+    },
+    {
+      "id": "907039",
+      "course_offering_code": "401431",
+      "title": "اينترنت اشياء",
+      "offering_day": "دوشنبه",
+      "offering_time": "07:00تا11:00",
+      "classroom_number": "كلاس 1302 طبقه سوم ساختمان آموزشي- كارگاه كامپيوتر",
+      "instructor_name": "محسن اشرفي",
+      "exam_date": null
+    },
+    {
+      "id": "9991038",
+      "course_offering_code": "314451",
+      "title": "اخلاق حرفه اي",
+      "offering_day": "شنبه",
+      "offering_time": "10:00تا12:00",
+      "classroom_number": "كلاس1101طبقه اول ساختمان آموزشي- ديتادار",
+      "instructor_name": "محمدامير محرري",
+      "exam_date": "2025-01-12"
+    },
+    {
+      "id": "907007",
+      "course_offering_code": "907113",
+      "title": "برنامه ­سازي پيشرفته 1",
+      "offering_day": "دوشنبه",
+      "offering_time": "07:00تا11:00",
+      "classroom_number": "-",
+      "instructor_name": "جواد زارعي",
+      "exam_date": null
+    },
+    {
+      "id": "705012",
+      "course_offering_code": "705241",
+      "title": "برنامه‌نويسي سيستمي",
+      "offering_day": "یک‌شنبه",
+      "offering_time": "14:00تا18:00",
+      "classroom_number": "كلاس 1312 طبقه سوم ساختمان آموزشي",
+      "instructor_name": "مهدي محمودزاده",
+      "exam_date": "2025-01-14"
+    },
+    {
+      "id": "907027",
+      "course_offering_code": "907352",
+      "title": "برنامه‌نويسي موبايل",
+      "offering_day": "یک‌شنبه",
+      "offering_time": "14:00تا18:00",
+      "classroom_number": "كارگاه گروه نرم افزاري پارت",
+      "instructor_name": "سعيد يوسفي",
+      "exam_date": "2025-01-21"
+    },
+    {
+      "id": "705006",
+      "course_offering_code": "705411",
+      "title": "توسعه نرم‌افزار",
+      "offering_day": "یک‌شنبه",
+      "offering_time": "14:00تا18:00",
+      "classroom_number": "كلاس 1302 طبقه سوم ساختمان آموزشي- كارگاه كامپيوتر",
+      "instructor_name": "احسان صفايي",
+      "exam_date": "2025-01-19"
+    },
+    {
+      "id": "9991000",
+      "course_offering_code": "317470",
+      "title": "كارآفريني",
+      "offering_day": "یک‌شنبه",
+      "offering_time": "14:00تا18:00",
+      "classroom_number": "1201 - ديتادار",
+      "instructor_name": "سيد داريوش عطاپور مقدم",
+      "exam_date": "2025-01-16"
+    },
+    {
+      "id": "3021119",
+      "course_offering_code": "907621",
+      "title": "برنامه‌نويسي مبتني بر وب",
+      "offering_day": "شنبه",
+      "offering_time": "08:00تا12:00",
+      "classroom_number": "كلاس 1301 طبقه سوم ساختمان آموزشي- كارگاه كامپيوتر",
+      "instructor_name": "مجتبي ملك فر",
+      "exam_date": "2025-01-25"
+    },
+    {
+      "id": "9991044",
+      "course_offering_code": "703442",
+      "title": "مهارت‌هاي مسئله‌يابي و تصميم‌گيري",
+      "offering_day": "یک‌شنبه",
+      "offering_time": "15:00تا17:00",
+      "classroom_number": "كلاس1206 طبقه دوم ساختمان آموزشي - ديتادار",
+      "instructor_name": "حميدرضا پاينده ثاني",
+      "exam_date": "2025-01-17"
+    },
+    {
+      "id": "9991034",
+      "course_offering_code": "703441",
+      "title": "بازاريابي مجازي",
+      "offering_day": "یک‌شنبه",
+      "offering_time": "15:00تا18:00",
+      "classroom_number": "كلاس1202 طبقه دوم ساختمان آموزشي - ديتادار",
+      "instructor_name": "سيد اسماعيل هاشمي",
+      "exam_date": "2025-01-20"
+    },
+    {
+      "id": "9991034",
+      "course_offering_code": "711290",
+      "title": "بازاريابي مجازي",
+      "offering_day": "یک‌شنبه",
+      "offering_time": "15:00تا18:00",
+      "classroom_number": "كلاس1107طبقه اول ساختمان آموزشي - ديتادار",
+      "instructor_name": "سعيد وحيدي فر",
+      "exam_date": "2025-01-20"
+    },
+    {
+      "id": "9118",
+      "course_offering_code": "401171",
+      "title": "زبان فارسي",
+      "offering_day": "یک‌شنبه",
+      "offering_time": "15:00تا18:00",
+      "classroom_number": "كلاس1211 طبقه دوم ساختمان آموزشي- ديتادار",
+      "instructor_name": "علي رجبي",
+      "exam_date": "2025-01-22"
+    },
+    {
+      "id": "3021124",
+      "course_offering_code": "302231",
+      "title": "كارگاه شبكه‌هاي كامپيوتري",
+      "offering_day": "یک‌شنبه",
+      "offering_time": "15:00تا18:00",
+      "classroom_number": "كلاس 1308 طبقه سوم ساختمان آموزشي- كارگاه كامپيوتر",
+      "instructor_name": "سيد محمد حسيني مدقق",
+      "exam_date": null
+    },
+    {
+      "id": "907023",
+      "course_offering_code": "302231",
+      "title": "كارگاه شبكه‌هاي كامپيوتري",
+      "offering_day": "یک‌شنبه",
+      "offering_time": "15:00تا18:00",
+      "classroom_number": "كلاس 1308 طبقه سوم ساختمان آموزشي- كارگاه كامپيوتر",
+      "instructor_name": "سيد محمد حسيني مدقق",
+      "exam_date": null
+    },
+    {
+      "id": "907038",
+      "course_offering_code": "907211",
+      "title": "محيط‌هاي چندرسانه‌اي",
+      "offering_day": "یک‌شنبه",
+      "offering_time": "15:00تا18:00",
+      "classroom_number": "كلاس 1313 طبقه سوم ساختمان آموزشي- كارگاه كامپيوتر",
+      "instructor_name": "رضا هاتفي",
+      "exam_date": "2025-01-12"
+    },
+    {
+      "id": "3021119",
+      "course_offering_code": "302321",
+      "title": "برنامه‌نويسي مبتني بر وب",
+      "offering_day": "یک‌شنبه",
+      "offering_time": "15:00تا19:00",
+      "classroom_number": "كلاس 1301 طبقه سوم ساختمان آموزشي- كارگاه كامپيوتر",
+      "instructor_name": "علي اكبر پاسبان",
+      "exam_date": null
+    },
+    {
+      "id": "3021118",
+      "course_offering_code": "302311",
+      "title": "برنامه‌نويسي موبايل 2",
+      "offering_day": "یک‌شنبه",
+      "offering_time": "15:00تا19:00",
+      "classroom_number": "كلاس 1309 طبقه سوم ساختمان آموزشي- كارگاه كامپيوتر",
+      "instructor_name": "اميرحسين الستي",
+      "exam_date": null
+    },
+    {
+      "id": "401011",
+      "course_offering_code": "401231",
+      "title": "پياده‌سازي تجهيزات غيرفعال شبكه",
+      "offering_day": "یک‌شنبه",
+      "offering_time": "15:00تا19:00",
+      "classroom_number": "كلاس 1307 طبقه سوم ساختمان آموزشي- كارگاه كامپيوتر",
+      "instructor_name": "سيدعباس روح بخش معارف",
+      "exam_date": null
+    }
+]

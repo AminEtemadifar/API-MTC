@@ -2,30 +2,37 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Routing\Controller as BaseController;
+
 /**
  * @OA\Info(
- *      version="1.0.0",
- *      title="MTC App Api",
- *      description="MTC Application OpenApi Documentation",
- *      @OA\Contact(
- *          email="aminetemadifar.w@gmail.com"
- *      ),
+ *     version="1.0.0",
+ *     title="MTC API Documentation",
+ *     description="API documentation for MTC system",
+ *     @OA\Contact(
+ *         email="admin@example.com"
+ *     )
  * )
- * @OA\SecurityScheme(
- *      scheme="bearer",
- *      securityScheme="bearerAuth",
- *      type="http",
- *      description="Enter your Bearer token",
- *      in="header",
- *      bearerFormat="JWT",
- *  )
+ * 
  * @OA\Server(
- *      url="https://api.honarisho.com/api",
- *      description="localhost"
+ *     url=https://api.honarisho.com,
+ *     description="API Server"
+ * ),
+ * @OA\Server(
+ *     url=http://api.honarisho.com,
+ *     description="API Server"
  * )
- *
+ * 
+ * @OA\SecurityScheme(
+ *     securityScheme="bearerAuth",
+ *     type="http",
+ *     scheme="bearer",
+ *     bearerFormat="JWT"
+ * )
  */
-abstract class Controller
+class Controller extends BaseController
 {
-    //
+    use AuthorizesRequests, ValidatesRequests;
 }

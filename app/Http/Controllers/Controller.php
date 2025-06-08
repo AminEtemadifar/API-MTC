@@ -15,16 +15,16 @@ use Illuminate\Routing\Controller as BaseController;
  *         email="admin@example.com"
  *     )
  * )
- * 
+ *
  * @OA\Server(
- *     url=https://api.honarisho.com,
+ *     url="https://api.honarisho.com",
  *     description="API Server"
  * ),
  * @OA\Server(
- *     url=http://api.honarisho.com,
+ *     url="http://api.honarisho.com",
  *     description="API Server"
  * )
- * 
+ *
  * @OA\SecurityScheme(
  *     securityScheme="bearerAuth",
  *     type="http",

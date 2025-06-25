@@ -10,5 +10,6 @@ class News extends Model
         'title',
         'description',
         'link',
+        'expire_at',
     ];
 }

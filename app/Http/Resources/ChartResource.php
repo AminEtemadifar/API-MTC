@@ -38,7 +38,7 @@ class ChartResource extends JsonResource
             'title' => $this->title,
             'sub_title' => $this->sub_title,
             'download_link' => $this->download_link,
-            'degree_level' => DegreeLevel::fromLabel($this->degree_level),
+            'degree_level' => $this->degree_level->label(),
             'study_field' => StudyFieldResource::make($this->whenLoaded('studyField')),
         ];
     }

@@ -26,8 +26,8 @@ class AuthController extends Controller
      *         required=true,
      *         @OA\JsonContent(
      *             required={"username","password"},
-     *             @OA\Property(property="username", type="string", example="john.doe"),
-     *             @OA\Property(property="password", type="string", format="password", example="password123")
+     *             @OA\Property(property="username", type="string", example="Admin"),
+     *             @OA\Property(property="password", type="string", format="password", example="123")
      *         )
      *     ),
      *     @OA\Response(
@@ -107,4 +107,4 @@ class AuthController extends Controller
 
         return response()->json(['message' => 'Logged out successfully']);
     }
-} 
+}

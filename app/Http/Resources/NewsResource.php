@@ -29,6 +29,7 @@ class NewsResource extends JsonResource
             'title' => $this->title,
             'description' => $this->description,
             'link' => $this->link,
+            'expire_at' => $this->expire_at,
         ];
     }
 }

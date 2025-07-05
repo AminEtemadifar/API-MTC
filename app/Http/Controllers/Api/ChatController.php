@@ -16,7 +16,7 @@ class ChatController extends Controller
     public function index()
     {
         var_dump(Auth::guard('web')->user());
-        var_dump(Auth::check('web')->user());
+        var_dump(Auth::check('web'));
 
         die();
         $user = Auth::guard('sanctum')->user();

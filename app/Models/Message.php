@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Message extends Model
@@ -12,8 +13,8 @@ class Message extends Model
         "user_id",
     ];
 
-    public function writer(): BelongsToMany
+    public function writer(): BelongsTo
     {
-        return $this->belongsToMany(User::class);
+        return $this->belongsTo(User::class);
     }
 }

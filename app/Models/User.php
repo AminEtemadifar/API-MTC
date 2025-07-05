@@ -38,6 +38,11 @@ class User extends Authenticatable
         return $this->belongsToMany(Lesson::class);
     }
 
+    public function instructor_lessons()
+    {
+        return $this->hasMany(Lesson::class , 'instructor_id');
+    }
+
     public function isAdmin(): bool
     {
         return $this->role_type === 'admin';

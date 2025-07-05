@@ -20,7 +20,7 @@ class MessageController extends Controller
             'user_id' => 'required|integer',
         ]);
 
-        dd([$validated['user_id'], $auth->id]);
+        dd([$validated['user_id'], "$auth->id"]);
         $messages = Message::query()
             ->whereIn('user_id', [$validated['user_id'], $auth->id])
             ->orderBy('created_at', 'desc')

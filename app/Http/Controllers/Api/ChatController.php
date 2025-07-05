@@ -15,7 +15,7 @@ class ChatController extends Controller
      */
     public function index()
     {
-        $user = Auth::guard('sanctum')->user();
+        $user = Auth::guard('web')->user();
         if ($user->isAdmin()) {
             $lessonIds = $user->instructor_lessons()->pluck('id');
             $chats = User::where('role_type', 'student')

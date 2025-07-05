@@ -26,8 +26,7 @@ class ChatController extends Controller
         } elseif ($user->isStudent()) {
             // Students see their instructors
             $instructorIds = $user->lessons()->pluck('instructor_id')->unique();
-            dd($instructorIds);
-            $chats = User::whereIn('role_type', ['admin', 'superadmin'])
+            $chats = User::whereIn('role_type', ['instructor', 'superadmin'])
                 ->whereIn('id', $instructorIds)
                 ->get();
         }else{

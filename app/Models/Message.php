@@ -11,6 +11,7 @@ class Message extends Model
     public $fillable = [
         "message",
         "user_id",
+        "created_at",
     ];
 
     public function writer(): BelongsTo

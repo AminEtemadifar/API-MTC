@@ -15,7 +15,7 @@ Route::get('/charts', [ChartController::class, 'index']);
 Route::get('/lessons', [LessonController::class, 'index']);
 
 // Protected routes
-Route::middleware('auth:web')->group(function () {
+Route::middleware('auth:users')->group(function () {
     Route::post('/logout', [AuthController::class, 'logout']);
 
     // News management routes (superadmin only)

@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources;
 
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
@@ -20,7 +21,7 @@ class MessageResource extends JsonResource
             'user' => $this->whenLoaded('writer', function () {
                 return UserResource::make($this->writer);
             }),
-            'created_at' => $this->created_at,
+            'created_at' => Carbon::parse($this->created_at)->toDateTimeString(),
         ];
     }
 }

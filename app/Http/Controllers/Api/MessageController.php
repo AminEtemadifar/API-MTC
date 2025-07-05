@@ -17,12 +17,12 @@ class MessageController extends Controller
     {
         $auth = Auth::guard('web')->loginUsingId(29);
         $validated = $request->validate([
-            'user_id' => 'nullable|integer',
+            'user_id' => 'required|integer',
         ]);
 
         $messages = Message::query()
             ->whereIn('user_id', [$validated['user_id'], $auth->id])
-            ->orderBy('create_at', 'desc')
+            ->orderBy('created_at', 'desc')
             ->get();
 
         return MessageResource::collection($messages);

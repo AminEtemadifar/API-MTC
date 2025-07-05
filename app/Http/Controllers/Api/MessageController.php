@@ -15,7 +15,7 @@ class MessageController extends Controller
      */
     public function index(Request $request)
     {
-        $auth = Auth::guard('web')->loginUsingId(29);
+        $auth = Auth::user();
         $validated = $request->validate([
             'user_id' => 'required|integer',
         ]);

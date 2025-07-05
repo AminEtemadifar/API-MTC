@@ -17,7 +17,9 @@ class MessageResource extends JsonResource
         return [
             'id' => $this->id,
             'message' => $this->message,
-            'user' => UserResource::make($this->writer),
+            'user' => $this->whenLoaded('writer', function () {
+                return UserResource::make($this->writer);
+            }),
             'created_at' => $this->created_at,
         ];
     }

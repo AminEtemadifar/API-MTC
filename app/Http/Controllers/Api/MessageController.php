@@ -21,6 +21,7 @@ class MessageController extends Controller
         ]);
 
         $messages = Message::query()
+            ->with("writer")
             ->whereIn('user_id', [$validated['user_id'], "$auth->id"])
             ->orderBy('created_at', 'desc')
             ->get();

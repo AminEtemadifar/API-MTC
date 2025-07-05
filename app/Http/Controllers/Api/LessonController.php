@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Resources\LessonResource;
 use App\Models\Lesson;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 /**
  * @OA\Tag(
@@ -32,7 +33,13 @@ class LessonController extends Controller
      */
     public function index()
     {
-        $lessons = Lesson::with(['instructor', 'students'])->get();
+        $user_id = \request()->get('user_id');
+        if ($user_id){
+            $user = Auth::guard('web')->loginUsingId($user_id);
+            $lessons = $user->lessons;
+        }else{
+            $lessons = Lesson::with(['instructor', 'students'])->get();
+        }
         return LessonResource::collection($lessons);
     }
 }

@@ -3,10 +3,9 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Http\Resources\NewsCollection;
 use App\Http\Resources\NewsResource;
 use App\Models\News;
-use Illuminate\Database\Query\Builder;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 /**
@@ -46,10 +45,10 @@ class NewsController extends Controller
     public function index(Request $request)
     {
         $validated = $request->validate([
-            'expire_at' => 'nullable|date_format:Y-m-d H:i:s',
+            'expire_at' => 'nullable|date',
         ]);
-        $news = News::query()->when(!empty($validated), function (Builder $q) use ($validated) {
-            return $q->whereDate('expire_date', $validated['expire_at']);
+        $news = News::query()->when(!empty($validated), function ($q) use ($validated) {
+            return $q->where('expire_at', ">=",  Carbon::parse($validated['expire_at'])->toDateString());
         })->latest()->get();
         return NewsResource::collection($news);
     }
@@ -67,7 +66,7 @@ class NewsController extends Controller
      *             @OA\Property(property="title", type="string", example="New Announcement"),
      *             @OA\Property(property="description", type="string", example="This is a new announcement"),
      *             @OA\Property(property="link", type="string", nullable=true, example="https://example.com/news/2"),
-     *             @OA\Property(property="expire_at", type="string", format="date-time", nullable=true, example="2024-12-31 23:59:59")
+     *             @OA\Property(property="expire_at", type="string", format="date-time", nullable=true, example="2024-12-30 23:59:59")
      *         )
      *     ),
      *     @OA\Response(
@@ -97,7 +96,7 @@ class NewsController extends Controller
             'title' => 'required|string|max:255',
             'description' => 'required|string',
             'link' => 'nullable|url',
-            'expire_at' => 'nullable|date_format:Y-m-d H:i:s',
+            'expire_at' => 'nullable|date',
         ]);
 
         $news = News::create($validated);
@@ -196,7 +195,7 @@ class NewsController extends Controller
             'title' => 'required|string|max:255',
             'description' => 'required|string',
             'link' => 'nullable|url',
-            'expire_at' => 'nullable|date_format:Y-m-d H:i:s',
+            'expire_at' => 'nullable|date',
         ]);
 
         $news->update($validated);

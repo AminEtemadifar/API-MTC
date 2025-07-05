@@ -15,7 +15,7 @@ class ChatController extends Controller
      */
     public function index()
     {
-        dd(Auth::guard('sanctum')->user());
+        var_dump(Auth::guard('sanctum')->user());die();
         $user = Auth::guard('sanctum')->user();
         if ($user->isAdmin()) {
             $lessonIds = $user->instructor_lessons()->pluck('id');

@@ -15,8 +15,7 @@ class ChatController extends Controller
      */
     public function index()
     {
-        var_dump(json_encode(Auth::guard('sanctum')));
-        var_dump(json_encode(Auth::guard('web')));
+        var_dump(json_encode(Auth::guard('users')));
 
         die();
         $user = Auth::guard('sanctum')->user();

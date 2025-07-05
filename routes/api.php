@@ -13,7 +13,7 @@ Route::post('/login', [AuthController::class, 'login']);
 Route::get('/news', [NewsController::class, 'index']);
 Route::get('/charts', [ChartController::class, 'index']);
 Route::get('/lessons', [LessonController::class, 'index']);
-Route::middleware('auth:sanctum')->apiResource('chats', ChatController::class)->only(['index']);
+Route::apiResource('chats', ChatController::class)->only(['index']);
 
 // Protected routes
 Route::middleware('auth:sanctum')->group(function () {

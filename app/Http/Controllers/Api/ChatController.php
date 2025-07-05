@@ -16,14 +16,14 @@ class ChatController extends Controller
     public function index()
     {
         $user = Auth::user();
-        if ($user->isAdmin) {
+        if ($user->isAdmin()) {
             $lessonIds = $user->instructor_lessons()->pluck('id');
             $chats = User::where('role_type', 'student')
                 ->whereHas('lessons', function (Builder $query) use ($lessonIds) {
                     $query->whereIn('lessons.id', $lessonIds);
                 })
                 ->get();
-        } elseif ($user->isStudent) {
+        } elseif ($user->isStudent()) {
             // Students see their instructors
             $instructorIds = $user->lessons()->pluck('instructor_id')->unique();
 

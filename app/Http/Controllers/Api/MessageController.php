@@ -3,17 +3,29 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\MessageResource;
 use App\Models\Message;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class MessageController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $auth = Auth::user();
+        $validated = $request->validate([
+            'user_id' => 'nullable|integer',
+        ]);
+
+        $messages = Message::query()
+            ->whereIn('user_id', [$validated['user_id'], $auth->id])
+            ->orderBy('create_at', 'desc')
+            ->get();
+
+        return MessageResource::collection($messages);
     }
 
     /**
@@ -24,27 +36,4 @@ class MessageController extends Controller
         //
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Message $message)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Message $message)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Message $message)
-    {
-        //
-    }
 }

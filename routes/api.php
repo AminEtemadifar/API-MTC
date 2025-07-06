@@ -13,7 +13,6 @@ Route::post('/login', [AuthController::class, 'login']);
 Route::get('/news', [NewsController::class, 'index']);
 Route::get('/charts', [ChartController::class, 'index']);
 Route::get('/lessons', [LessonController::class, 'index']);
-Route::apiResource('chats', ChatController::class)->only(['index']);
 
 // Protected routes
 Route::middleware('auth:sanctum')->group(function () {
@@ -21,7 +20,7 @@ Route::middleware('auth:sanctum')->group(function () {
 
     // News management routes (superadmin only)
     Route::apiResource('news', NewsController::class)->except(['index']);
-
+    Route::apiResource('chats', ChatController::class)->only(['index']);
     Route::apiResource('messages', MessageController::class)->only(['index' , 'store']);
 
 });

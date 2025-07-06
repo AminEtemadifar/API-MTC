@@ -19,29 +19,6 @@ use Illuminate\Http\Resources\Json\JsonResource;
  */
 class UserResource extends JsonResource
 {
-    /**
-     * Get chat list for authenticated user.
-     *
-     * @OA\Get(
-     *     path="/api/chats",
-     *     tags={"Chats"},
-     *     summary="List chat users based on role",
-     *     description="Returns a list of users the authenticated user can chat with. Admins see students of their lessons, students see their instructors, superadmins see both.",
-     *     security={{"sanctum":{}}},
-     *     @OA\Response(
-     *         response=200,
-     *         description="Successful list",
-     *         @OA\JsonContent(
-     *             type="array",
-     *             @OA\Items(ref="#/components/schemas/UserResource")
-     *         )
-     *     ),
-     *     @OA\Response(
-     *         response=401,
-     *         description="Unauthorized"
-     *     )
-     * )
-     */
     public function toArray(Request $request): array
     {
         return [

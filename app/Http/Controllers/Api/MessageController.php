@@ -17,7 +17,7 @@ class MessageController extends Controller
      *     path="/api/messages",
      *     summary="List messages with another user",
      *     tags={"Messages"},
-     *     security={{"sanctum":{}}},
+     *     security={{"bearerAuth":{}}},
      *
      *     @OA\Parameter(
      *         name="user_id",

@@ -38,7 +38,7 @@ class ChatController extends Controller
         $user = Auth::guard('sanctum')->user();
         if ($user->isAdmin()) {
             $lessonIds = $user->instructor_lessons()->pluck('id');
-            $chats = User::where('role_type', 'student')
+            $chats = User::whereNot('id' , $user->id)->where('role_type', 'student')
                 ->whereHas('lessons', function (Builder $query) use ($lessonIds) {
                     $query->whereIn('lessons.id', $lessonIds);
                 })
@@ -46,11 +46,12 @@ class ChatController extends Controller
         } elseif ($user->isStudent()) {
             // Students see their instructors
             $instructorIds = $user->lessons()->pluck('instructor_id')->unique();
-            $chats = User::whereIn('role_type', ['instructor', 'superadmin'])
+            $chats = User::query()->whereNot('id' , $user->id)->whereIn('role_type', ['instructor', 'superadmin'])
                 ->whereIn('id', $instructorIds)
                 ->get();
         }else{
             $chats = User::query()
+                ->whereNot('id' , $user->id)
                 ->whereIn('role_type', ['superadmin', 'student'])
                 ->get();
         }

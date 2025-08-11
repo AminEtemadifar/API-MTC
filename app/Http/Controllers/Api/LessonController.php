@@ -36,7 +36,7 @@ class LessonController extends Controller
         $user_id = \request()->get('user_id');
         if ($user_id){
             $user = Auth::guard('web')->loginUsingId($user_id);
-            $lessons = $user->lessons;
+            $lessons = $user->lessons()->with(['instructor', 'students'])->get();
         }else{
             $lessons = Lesson::with(['instructor', 'students'])->get();
         }

@@ -18,6 +18,7 @@ class Chart extends Model
 
     protected $casts = [
         'degree_level' => DegreeLevel::class,
+        'download_link' => "string",
     ];
 
     public function studyField(): BelongsTo

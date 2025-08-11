@@ -51,6 +51,7 @@ class MessageController extends Controller
         $messages = Message::query()
             ->with("writer")
             ->whereIn('user_id', [$validated['user_id'], "$auth->id"])
+            ->whereIn('writer_id', [$validated['user_id'], "$auth->id"])
             ->orderBy('created_at', 'desc')
             ->get();
 
@@ -88,12 +89,12 @@ class MessageController extends Controller
      */
     public function store(Request $request)
     {
-        $request = $request->merge(['user_id' , Auth::id()]);
         $validated = $request->validate([
             'message' => 'required|string|max:255',
             'user_id' => 'required',
-        ]);
 
+        ]);
+        $validated['writer_id'] = Auth::id();
         $message = Message::create($validated);
 
         return MessageResource::make($message);

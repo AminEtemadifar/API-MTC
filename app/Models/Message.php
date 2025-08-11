@@ -11,10 +11,15 @@ class Message extends Model
     public $fillable = [
         "message",
         "user_id",
+        "writer_id",
         "created_at",
     ];
 
     public function writer(): BelongsTo
+    {
+        return $this->belongsTo(User::class , 'writer_id');
+    }
+    public function user(): BelongsTo
     {
         return $this->belongsTo(User::class , 'user_id');
     }

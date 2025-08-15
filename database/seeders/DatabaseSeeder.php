@@ -14,17 +14,9 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         // Create admin user
-        User::create([
-            'name' => 'Admin User',
-            'username' => 'admin',
-            'password' => bcrypt('123'),
-            'role_type' => 'admin'
-        ]);
 
         // Run seeders
         $this->call([
-            StudyFieldSeeder::class,
-            LessonSeeder::class,
             ChartSeeder::class,
             UserSeeder::class
         ]);

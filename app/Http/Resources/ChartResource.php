@@ -15,13 +15,6 @@ use Illuminate\Http\Resources\Json\JsonResource;
  *     @OA\Property(property="sub_title", type="string", example="Bachelor's Degree Program"),
  *     @OA\Property(property="download_link", type="string", example="https://example.com/charts/cs-bachelor.pdf"),
  *     @OA\Property(property="degree_level", type="string", example="Bachelor", description="Associate, Bachelor, Master, PhD"),
- *     @OA\Property(
- *         property="study_field",
- *         type="object",
- *         nullable=true,
- *         @OA\Property(property="id", type="integer", example=1),
- *         @OA\Property(property="title", type="string", example="Computer Science")
- *     )
  * )
  */
 class ChartResource extends JsonResource
@@ -39,7 +32,6 @@ class ChartResource extends JsonResource
             'sub_title' => $this->sub_title,
             'download_link' => $this->download_link,
             'degree_level' => $this->degree_level->label(),
-            'study_field' => StudyFieldResource::make($this->whenLoaded('studyField')),
         ];
     }
 }

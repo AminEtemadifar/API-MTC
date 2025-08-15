@@ -3,34 +3,34 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Lesson extends Model
 {
+    protected $table = 'info_lessons';
+    protected $primaryKey = 'CodeBL';
+    public $incrementing = false;
+    protected $keyType = 'string';
 
     protected $fillable = [
-        'code',
-        'course_offering_code',
-        'title',
-        'offering_day',
-        'offering_time',
-        'classroom_number',
-        'instructor_id',
-        'exam_date',
+        'CodeBL',
+        'CodeTL',
+        'Name',
+        'UnitT',
+        'TheoryTime',
+        'UnitP',
+        'PracticalTime',
+        'CodePL1',
+        'CodePL2',
+        'CodePL3',
+        'CodePL4',
+        'status',
     ];
 
     protected $casts = [
-        'exam_date' => 'date',
+        'UnitT' => 'integer',
+        'TheoryTime' => 'integer',
+        'UnitP' => 'integer',
+        'PracticalTime' => 'integer',
     ];
 
-    public function instructor(): BelongsTo
-    {
-        return $this->belongsTo(User::class, 'instructor_id');
-    }
-
-    public function students(): BelongsToMany
-    {
-        return $this->belongsToMany(User::class);
-    }
 }

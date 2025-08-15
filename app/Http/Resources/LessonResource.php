@@ -42,17 +42,17 @@ class LessonResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
-            'id' => $this->id,
-            'code' => $this->code,
-            'course_offering_code' => $this->course_offering_code,
-            'title' => $this->title,
-            'offering_day' => $this->offering_day,
-            'offering_time' => $this->offering_time,
-            'classroom_number' => $this->classroom_number,
-            'exam_date' => $this->exam_date?->format('Y-m-d'),
+            'id' => $this->CodeTGL,
+            'code' => $this->lesson->CodeBL,
+            'course_offering_code' => $this->CodeTGL,
+            'title' => $this->lesson->Name,
+            'offering_day' => $this->day_name,
+            'offering_time' => $this->day_time,
+            'classroom_number' => $this->CodeClass,
+            'exam_date' => $this->DateExam,
             'instructor' => new UserResource($this->whenLoaded('instructor')),
             'students_count' => $this->whenCounted('students'),
             'students' => UserResource::collection($this->whenLoaded('students')),
-        ];
+            ];
     }
 }

@@ -24,7 +24,6 @@ class ChartSeeder extends Seeder
                 'title' => $chart['title'],
                 'sub_title' => $chart['sub_title'],
                 'download_link' => $chart['download_link'],
-                'study_field_id' => $chart['study_field_id'],
                 'degree_level' => $chart['degree_level'],
             ]);
         }

@@ -16,7 +16,6 @@ return new class extends Migration
             $table->string('title');
             $table->string('sub_title');
             $table->string('download_link')->nullable();
-            $table->foreignId('study_field_id')->constrained('study_fields');
             $table->integer('degree_level');
             $table->timestamps();
         });

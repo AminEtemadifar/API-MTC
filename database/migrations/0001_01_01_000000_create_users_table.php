@@ -17,7 +17,6 @@ return new class extends Migration
             $table->string('username');
             $table->string('password');
             $table->string('national_code')->nullable();
-            $table->unsignedBigInteger('study_field_id')->nullable();
             $table->string('role_type')->default('student');
             $table->rememberToken();
             $table->timestamps();

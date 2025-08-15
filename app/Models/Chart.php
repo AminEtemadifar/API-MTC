@@ -12,7 +12,6 @@ class Chart extends Model
         'title',
         'sub_title',
         'download_link',
-        'study_field_id',
         'degree_level',
     ];
 

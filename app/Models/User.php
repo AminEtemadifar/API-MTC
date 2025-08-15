@@ -15,7 +15,6 @@ class User extends Authenticatable
         'username',
         'password',
         'national_code',
-        'study_field_id',
         'role_type',
     ];
 
@@ -35,12 +34,12 @@ class User extends Authenticatable
 
     public function lessons()
     {
-        return $this->belongsToMany(Lesson::class);
+        return $this->belongsToMany(Wscrterm::class, 'info_term', 'codeSt', 'codeBL', 'username', 'codeBL');
     }
 
     public function instructor_lessons()
     {
-        return $this->hasMany(Lesson::class , 'instructor_id');
+        return $this->hasMany(Wscrterm::class , 'CodeProf');
     }
 
     public function isAdmin(): bool

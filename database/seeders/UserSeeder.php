@@ -34,6 +34,20 @@ class UserSeeder extends Seeder
                 'national_code' => '3456789012',
                 'role_type' => 'student',
             ],
+            [
+                'name' => 'محمد حسین قباسفیدی',
+                'username' => '01121055705033',
+                'password' => '123',
+                'national_code' => '0926240455',
+                'role_type' => 'student',
+            ],
+            [
+                'name' => 'Admin User',
+                'username' => 'admin',
+                'password' => '123',
+                'national_code' => null,
+                'role_type' => 'admin'
+            ]
         ];
 
         // Create students and associate them with lessons
@@ -46,9 +60,6 @@ class UserSeeder extends Seeder
                 'role_type' => $studentData['role_type'],
             ]);
 
-            // Get random lessons and associate them with the student
-            $lessons = Lesson::inRandomOrder()->take(rand(7,10))->get();
-            $student->lessons()->attach($lessons);
         }
     }
-} 
+}
